@@ -1,0 +1,404 @@
+\documentclass[skorowidz,xodstep,magisterska]{dyplomWIZUTMJ}
+%\nrwersji {0.1}
+\author   {Albina Muratgaziieva}%
+\nralbumu {46711}%
+\email    {e-mail@wi.zut.edu.pl}
+\title    { Praesent id volutpat lectus, at eleifend turpis. }
+\tytulang{Curabitur egestas molestie nunc, id dapibus mauris imperdiet nec.}
+\kierunek {Informatyka}%
+\specjalnosc{specjalnośc}
+\date     {2019}%
+\miejsce  {Szczecin}%
+\opiekun  {dr~inż.~Imię NazwiskoPromotor}%
+\jednostka{Katedra Architektury Komputerów i Informatyki}%
+\datawydania{31.01.2018.}% data wydania tematy w SIWE/Uczelni.XP
+\datazlozenia{...}% data złożenia pracy w systemie informatycznym
+%\rodzajpracy{dyplomowa inżynierska} \def\specj{0} 
+%\rodzajpracy{dyplomowa magisterska} \def\specj{1} 
+%\formastudiow{studia stacjonarne}
+\formastudiow{studia stacjonarne}
+
+\usepackage{enumitem}
+\setlist{itemsep=.1em}
+
+\setlist[enumerate]{leftmargin=1.8pc}
+\setlist[description]{font=\sffamily\bfseries}
+
+%\usepackage{array}
+%\usepackage{multirow,tikz}
+%\usepackage{amssymb}
+%\usepackage{pdfpages}
+%\usepackage{rotating}
+%\usepackage{afterpage}
+%\usepackage[paper=A4,pagesize,BCOR=0mm]{typearea}
+%\newcolumntype{C}[2]{>{\columncolor{#1}\raggedleft}p{#2}}
+
+
+%\usepackage{caption}
+
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{mathptmx}
+%\usepackage{hyperref}
+%\usepackage[unicode=true,hidelinks]{hyperref}
+
+
+\usepackage{nameref}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[style=super,toc=true,hyper=true,number=none]{glossary}
+\usepackage{float}
+\usepackage{color}
+\usepackage{appendix}
+\usepackage{array}
+\usepackage{booktabs}
+\floatstyle{ruled}
+%\floatstyle{boxed}%
+%\floatstyle{plain}%
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array,booktabs,ragged2e}
+
+\usepackage{tabu}
+
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{<{\RaggedLeft\arraybackslash}p{#1}}				
+				
+\usepackage[final]{pdfpages}
+\usepackage{placeins}
+
+
+
+\newcommand{\zmien}[1]{!!!!!!!!!\textbf{#1}!!!!!!!!!!!}
+\newcommand{\termin}[1]{\textit{#1}}
+\newcommand{\norma}[4]{\item[#1] \textit{#2}\\#3}
+
+
+\newcommand{\ber}{\begin{eqnarray*}}
+	\newcommand{\eer}{\end{eqnarray*}}
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+\newcommand{\bd}{\begin{displaymath}}
+\newcommand{\ed}{\end{displaymath}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+
+\newcommand{\ben}{\begin{enumerate}}
+	\newcommand{\een}{\end{enumerate}}
+
+
+\newcommand{\omowienie}[3]{\begin{description}
+		\item[#1] #2 (rysunek~\ref{#3} na stronie~\pageref{#3})
+	\end{description}}
+	
+	
+	\newcommand{\minip}[2]{\begin{minipage}{#1}{#2}\end{minipage}}
+	
+	
+	\newcommand{\popraw}[1]{{\color{black} #1}}
+	\newcommand{\warunek}[1]{\noindent \begin{flushleft}
+			{\textbf{#1:}}
+		\end{flushleft}}
+		
+	\newcommand{\waruneksp}{\begin{flushright}
+				{\textbf{\color{black} warunek spełniony}}
+			\end{flushright}}
+			\newcommand{\waruneknsp}{\begin{flushright}
+					\textbf{\color{red}warunek niespełniony}
+				\end{flushright}}
+				
+				
+				
+
+
+
+\makeglossary
+
+
+
+
+
+
+
+\makeatletter
+\AtBeginDocument{%
+	\expandafter\renewcommand\expandafter\subsection\expandafter
+	{\expandafter\@fb@secFB\subsection}%
+	\newcommand\@fb@secFB{\FloatBarrier
+		\gdef\@fb@afterHHook{\@fb@topbarrier \gdef\@fb@afterHHook{}}}%
+	\g@addto@macro\@afterheading{\@fb@afterHHook}%
+	\gdef\@fb@afterHHook{}%
+}
+
+			
+			
+\@ifundefined{bigstrutjot}{\newdimen\bigstrutjot}{}\bigstrutjot2pt
+\def\bigstrut{\relax\@ifnextchar [{\@bigstrut}{\@bigstrut[x]}}
+\def\@bigstrut[#1]{\unskip\@tempdima\ht\@arstrutbox \@tempdimb\dp\@arstrutbox
+	\ifx #1b\else \advance\@tempdima by \bigstrutjot\fi
+	\ifx #1t\else \advance\@tempdimb by \bigstrutjot\fi
+	\hbox{\vrule \@height\@tempdima \@depth\@tempdimb \@width\z@}\ignorespaces} 
+
+
+%\let\orgdescriptionlabel\descriptionlabel
+%\renewcommand*{\descriptionlabel}[1]{%
+%	\let\orglabel\label
+%	\let\label\@gobble
+%	\phantomsection
+%	\edef\@currentlabel{#1}%
+%	\edef\@currentlabelname{#1}%
+%	\let\label\orglabel
+%	\orgdescriptionlabel{#1}%
+
+
+\let\orgdescriptionlabel\descriptionlabel
+\renewcommand*{\descriptionlabel}[1]{%
+	\let\orglabel\label
+	\let\label\@gobble
+	\phantomsection
+	\protected@edef\@currentlabel{#1}%
+	\edef\@currentlabelname{#1}%
+	\let\label\orglabel
+	\orgdescriptionlabel{#1}%
+}
+
+
+
+\makeatother  
+
+%\newcommand{\minip}[2]{\begin{minipage}{#1}{#2}\end{minipage}}
+
+%\usepackage{array,booktabs,ragged2e}
+%\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+
+%\usepackage[final]{pdfpages}
+
+%\makeatletter
+%\let\orgdescriptionlabel\descriptionlabel
+%\renewcommand*{\descriptionlabel}[1]{%
+%	\let\orglabel\label
+%	\let\label\@gobble
+%	\phantomsection
+%	\edef\@currentlabel{#1}%
+%	%\edef\@currentlabelname{#1}%
+%	\let\label\orglabel
+%	\orgdescriptionlabel{#1}%
+%}
+%\makeatother
+
+
+
+
+
+\newcommand{\newppage}{\newpage\hspace{3mm}\ \vspace{5mm}\newpage}
+
+
+
+
+\newenvironment{Tabular}[2][1]
+{\def\arraystretch{#1}\tabular{#2}}
+{\endtabular}
+
+\usepackage{afterpage}
+%\usepackage[paper=A4,pagesize,BCOR=0mm]{typearea}
+
+%\usepackage{bibtopic}
+
+
+
+
+
+\begin{document}
+\setcounter{tocdepth}{1}
+%\tableofcontents
+
+\begin{streszczenie}
+	W pracy dyplomowej przedstawiono zagadnienie projektowania oświetlenia ulicznego z wykorzystaniem obowiązujących norm  oraz narzędzi komputerowych służących do projektowania i symulacji rozkładu oświetlenia.
+\end{streszczenie}
+
+\slowakluczowe{oświetlenie uliczne}
+
+\begin{abstract}
+	This diploma thesis explores the problem of designing street lighting using the currently applicable standards and computer tools for designing and simulating light distribution. Basic terminology with regard to lighting and the designing process itself are discussed. 	
+\end{abstract}
+
+\keywords{street lightning}
+
+\renewcommand{\labelitemi}{---}
+
+
+\maketitle
+
+%\printglossary
+
+%\newppage
+
+\newpage
+\Wprowadzenie  
+%%\input{WprowadzenieNew.tex}
+
+
+\cel{Celem pracy jest sprawdzenie opłacalności ekonomicznej inwestycji w LED-owe oświetlenie uliczne z wykorzystaniem paneli solarnych poprzez wykonanie wszystkich niezbędnych etapów projektowania: rozpoznanie zagadnienia, przeanalizowanie dostępnych certyfikowanych rozwiązań słupów solarnych i ich parametrów, wybór układu drogi i przeanalizowanie rozkładu oświetlenia dla kilku wariantów źródeł światła i ich położenia. Nastepnie wybór rozwiązania technicznego i analiza opłacalności poprzez porownanie z oświetleniem tradycyjnym zasilanym z sieci energetycznej.}
+
+\zakres{Zakres pracy obejmuje pełny projekt oświetlenia wybranej ulicy w oparciu o autonomiczne lampy LED, których zasilanie ma być zrealizowane przy pomocy indywidualnych paneli fotowoltaicznych. Zaprojektowane oświetlenie musi być zgodne z obowiązującymi normami i przepisami, a obliczenia, w tym również nierównomierności oświetlenia, przeprowadzone ze wspomaganiem programów specjalizowanych. Dobór lamp, źródeł LED, słupów, paneli fotowoltaicznych i akumulatorów ma zapewnić ciągłość oświetlenia przez 3 kolejne dni pochmurne i deszczowe. Należy uwzględnić zagadnienia sterowania inteligentnego. Przygotować przedmiar materiałów oraz skrócony kosztorys inwestycji, a także wykonać skróconą analizę techniczno-ekonomiczną, porównawczą kosztów inwestycyjnych i eksploatacyjnych ulicy dla standardowego i LED-wego oświetlenia.}
+
+
+
+%
+\chapter{Terminologia i podstawy prawne \label{chap:TerminologiaIPodstawyPrawne}}
+
+Na początku pracy zostanie przedstawiona podstawowa terminologia, dane meteorologiczne, strefy wiatrowe, a także zostaną poruszone zagadnienia związane z normalizacja (procesem normalizacji, celem) oraz normy ogólne i szczegółowe dotyczące oświetlenia drogowego. 
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Pic1.png}
+	\caption[fragment programu w LabView]{Przykładowy rysunek --- fragment programu w LabView}
+	\label{fig:pic1}
+\end{figure}
+
+
+		\section{Terminologia\label{sec:Terminologia}}	
+		Vestibulum sit amet sapien efficitur, euismod diam quis, vehicula enim. Nam aliquam velit sit amet turpis tempus, quis tincidunt nisl accumsan. In id sapien dictum, aliquam purus vitae, cursus est. Curabitur convallis lacus sit amet convallis ornare. Etiam viverra neque id suscipit accumsan. Fusce enim neque, dignissim ac faucibus ac, fringilla ut nibh. Morbi ullamcorper iaculis arcu nec vestibulum. Nunc dui ipsum, euismod sed convallis convallis, pretium nec risus. Vivamus ullamcorper nisl scelerisque elit dictum, eu euismod nunc ullamcorper. Suspendisse tortor felis, fermentum vel libero vitae, ultricies consectetur est. Donec non eleifend dolor, imperdiet dapibus nibh. Donec eu justo lobortis, efficitur risus in, porta felis.
+
+
+			
+		\section{Dane meteorologiczne, strefy wiatrowe\label{sec:Meteo}}
+		Proin purus nunc, ornare nec tellus sit amet, malesuada sagittis leo. Curabitur vitae eleifend quam. Phasellus at mauris luctus, pretium odio eu, malesuada nibh. Fusce urna odio, consectetur id tristique sit amet, consequat vitae purus. Nullam ultricies mi eu felis posuere, id congue diam mollis.
+		\begin{table}[H]
+	\centering
+	\caption{Donec et mauris vel ante fermentum faucibus.}
+	\begin{Tabular}[.8]{rrr}
+		\toprule
+		\multicolumn{1}{c}{\textbf{Mauris lobortis risus et nisi }} & \multicolumn{1}{c}{\textbf{tempus nec nec tellus}} \\
+		\midrule
+		\multicolumn{1}{l}{In mauris augue} & 167m/h & \\
+		\multicolumn{1}{l}{gravida ut pulvinar vel} & 100m/h &\\
+		\multicolumn{1}{l}{pellentesque ornare purus} & 376m/h &\\
+		\multicolumn{1}{l}{nunc scelerisque sem} & 403m/h & \\
+		\multicolumn{1}{l}{velit nec ullamcorper} & 123m/h &\\\hline
+		
+	\end{Tabular}%
+	\label{tab:KosztUlozeniaKabla}%
+\end{table}%
+	
+
+\chapter{Istniejące rozwiązania\label{chap:IstniejaceRozwiazania}}
+
+Celem tego rozdziału jest pokazanie istniejących rozwiązań słupów solarnych i hybrydowych zaprojektowanych do oświetlania dróg .....
+
+	\section{Lampy solarne i hybrydowe}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales bibendum nisl et laoreet. Suspendisse facilisis semper dui, nec cursus odio. In hac habitasse platea dictumst. Integer fringilla enim non elit euismod, eu vulputate nisl ultricies.
+	\section{Przykładowe rozwiązania dróg\label{sec:ExampleDrogi}}
+		 Sed faucibus turpis velit, ac commodo urna pulvinar a. Morbi porttitor, arcu ac sodales faucibus, sem purus varius mauris, non interdum eros neque in ex. Ut iaculis libero nec posuere mollis.
+	\section{Sterowanie inteligentne}
+	In sem enim, vestibulum vel pulvinar ac, viverra sit amet arcu. Phasellus pulvinar tortor id odio molestie ornare. Donec molestie maximus mi, porttitor fringilla erat. 
+
+
+\chapter{Projekt oświetlenia solarnego\label{chap:ProjektOswietleniaSolarnego}}
+
+Nulla consequat orci augue, eu pulvinar tortor pharetra a. Nam lorem arcu, iaculis id laoreet ac, malesuada a tortor. Etiam quis vehicula erat, vitae maximus erat. Fusce elementum neque quis scelerisque lobortis. Sed velit lacus, viverra nec aliquam vitae, fringilla eu dolor.
+
+
+	\section{Zakres robót}Fusce consequat egestas justo, a tincidunt ante maximus eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+	\section{Wybór drogi} Praesent ultrices nisi sit amet nunc porttitor tempor. Mauris id libero sed mauris aliquam mollis. Aliquam vel laoreet metus. Cras ultrices diam porta diam varius dapibus.
+	\section{Wybór klasy oświetlenia\label{chap:WyborKlasyOswietleniowej}}
+			Nullam congue nisl vel elit condimentum interdum. Sed varius felis id purus auctor, vitae tempor metus vestibulum. Nunc interdum magna ut augue scelerisque, et elementum sem pulvinar.
+	\section{Obliczenia oświetlenia. Dialux.}
+		Fusce ultrices, leo ut fermentum vulputate, nisl dolor maximus dui, et sodales libero sem quis leo. Mauris tempus neque justo, vel faucibus purus hendrerit at. 
+		
+
+\chapter{Wybór i analiza rozwiązania technicznego\label{chap:WyborIAnalizaRozwiazania}}
+
+Wszystkie etapy projektowe przedstawione dotychczas mogły być realizowane bez konieczności uszczegóławiania rozwiązania technicznego jakim jest autonomiczny słup solarny. .....  został przedstawiony w Dodatku \ref{App:BIOZ} na stronie \pageref{App:BIOZ}.
+
+
+	\section{Specyfikacja techniczna \label{sec:ST}}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mi quis tortor luctus placerat. Mauris fringilla dictum sem, at scelerisque est.
+	\section{Rysunki techniczne}
+		 Curabitur aliquam sapien ante, id fermentum velit dapibus at. Aenean ut scelerisque eros. Duis hendrerit ipsum ac velit condimentum bibendum. 
+		 \begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{rysunekTechniczny1.jpg}
+	\caption[rysunek techniczny]{Rysunek techniczny}
+	\label{fig:pic1}
+\end{figure}
+
+	\section{Wytyczne wykonawcze\label{sec:ProjWykonawczy}}
+			Mauris et diam tristique, pulvinar turpis sagittis, bibendum orci. Aenean ultrices consectetur metus, ut mollis quam tristique vitae. 
+	\section{Przedmiar\label{sec:Przedmiar}}
+	Duis viverra erat ac mattis malesuada. Etiam elementum massa est, quis faucibus felis tincidunt eu. Curabitur laoreet neque nec sem gravida, eget sodales orci egestas.
+	\section{Analiza rozwiązania \label{sec:Analiza}}
+  Suspendisse potenti. Etiam egestas risus nunc, facilisis egestas lectus dapibus ut. Sed quis ultrices turpis. Quisque eu euismod elit.
+		
+
+ \begin{table}[H]
+	\centering
+	\caption{Układanie kabla w ziemi}
+	\begin{Tabular}[.8]{rrr}
+		\toprule
+		\multicolumn{1}{c}{\textbf{Układanie kabla w ziemi}} & \multicolumn{1}{c}{\textbf{m.b.}} & zł \\
+		\midrule
+		\multicolumn{1}{l}{Wykop ręczny o głębokość 0.8m} & 20 & \\
+		\multicolumn{1}{l}{Wykonanie podsypki z piasku} & 10 &\\
+		\multicolumn{1}{l}{Ułożenie bednarki} & 3 &\\
+		\multicolumn{1}{l}{Ułożenie kabla o przekroju żyły do 25mm2} & 4& \\
+		\multicolumn{1}{l}{Ułożenie folii} & 0,5 &\\\hline
+		& \textbf{37,5 } & zl\\
+		\bottomrule
+	\end{Tabular}%
+	\label{tab:KosztUlozeniaKabla}%
+\end{table}%
+
+%
+\nocite{*}
+\Zakonczenie
+Quisque sodales consectetur neque, in tempus leo rutrum sed. Ut aliquam est ac lacinia porttitor. Phasellus finibus ut velit ac elementum. Morbi sed viverra nisl. Maecenas egestas elementum mi eu tempor. Sed malesuada gravida risus, vel semper odio congue sed. Cras ac feugiat neque. Nulla eleifend gravida tortor, in iaculis urna euismod vel. In nec porttitor metus. Nullam ultrices id lorem nec molestie. Cras quis nisi libero. Quisque congue leo sit amet ligula fermentum eleifend vitae non diam. Maecenas consectetur nisl purus, vel rhoncus orci accumsan at. Fusce interdum neque efficitur lacus auctor commodo non sed mauris. Pellentesque dapibus, eros id finibus tincidunt, enim purus mattis nisi, at viverra libero nisl eget tortor.
+
+
+
+\appendix 
+%\addcontentsline{toc}{chapter}{DODATEK}
+\chapter{Opracowania uzupełniające}
+\section{Bezpieczeństwo i ochrona zdrowia\label{App:BIOZ}}
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum faucibus erat, nec tristique arcu suscipit vitae. Sed pellentesque ullamcorper dui ut efficitur. Phasellus convallis sapien ac lectus convallis, ut faucibus est egestas. Duis ligula dolor, viverra vel lorem et, facilisis pharetra elit. Cras rhoncus lacinia imperdiet.
+\section{Modelowanie panelu fotowoltaicznego }
+	Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ac convallis quam, eu iaculis mauris. Nunc ullamcorper vitae ex ut fringilla. Aenean auctor arcu ac massa dapibus, vel consectetur magna sodales. Fusce sit amet velit vulputate, suscipit odio at, faucibus quam.
+\section{Uzupełniające wyniki symulacji oświetlenia. Dialux.}
+	Vivamus vestibulum enim id diam tincidunt luctus. Vestibulum porttitor purus magna. Proin quis faucibus dolor. Praesent rutrum enim tortor, vel laoreet turpis faucibus a. Nunc lacinia porttitor enim, id rhoncus elit. Ut purus libero, condimentum eget dolor sodales, accumsan pharetra tortor.
+
+
+
+
+\inputencoding{cp1250}
+\bibliography{DyplomNew}{}
+\inputencoding{utf8}
+
+\bibliographystyle{pldyplom}
+
+
+
+
+
+
+\listoftables %%
+
+\listoffigures
+
+%\listof{Program}{Spis kodów źródłowych}
+%\addcontentsline{toc}{chapter}{Spis kodów źródłówych}
+%
+% Skorowidz (opcjonalnie)
+\printindex
+
+
+\end{document}
+
+
+%\spisymb{H(s)}{transmitancja}{4}%
+%\spisymb{h(t)}{odpowiedź impulsowa układu}{3}%
+%\spisymb{w(t)}{okno czasowe}{5}%
+%
+%\spisymb{\alpha}{termicznej}{6}
+
